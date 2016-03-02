@@ -82,4 +82,31 @@ template<class Type>
 Type CTECList<Type>::removeFromPosition(int index)
 {
 
+	assert(index >= 0);
+	assert(index < size);
+	assert(this->size>0);
+	Type storedValue;
+	ArrayNode<Type> * current = head;
+	ArrayNode<Type> * previous;
+	ArrayNode<Type> * newNext;
+
+	for(int spot = 0; spot < index +1; spot++)
+	{
+		if(spot == index-1)
+		{
+			previous = current;
+		}
+		if(spot == index)
+		{
+			storedValue = current->getValue();
+			newNext = current->getNext();
+			delete current;
+		}
+
+		current = current->getNext();
+	}
+
+	previous->setNext(newNext);
+
+	return storedValue;
 }
