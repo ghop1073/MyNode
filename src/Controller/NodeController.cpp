@@ -6,6 +6,7 @@
  */
 
 #include "NodeController.h"
+#include "../Tests/ListTester.cpp"
 #include <iostream>
 using namespace std;
 
@@ -25,6 +26,7 @@ void NodeController :: start()
 {
 	codeTimer.startTimer();
 
+
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index, (index * 7));
@@ -37,5 +39,8 @@ void NodeController :: start()
 
 	codeTimer.stopTimer();
 	codeTimer.displayTimerInfo();
+
+	ListTester myListTester;
+	myListTester.allTests();
 
 }
