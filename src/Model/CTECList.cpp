@@ -11,6 +11,9 @@ template <class Type>
 
 CTECList<Type>::CTECList()
 {
+	this->size = 0;
+	this->head = nullptr;
+	this->end = nullptr;
 
 }
 
