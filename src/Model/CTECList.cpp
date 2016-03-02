@@ -110,3 +110,37 @@ Type CTECList<Type>::removeFromPosition(int index)
 
 	return storedValue;
 }
+
+template <class Type>
+Type CTECList<Type> :: removeFromEnd()
+{
+	assert(size>0);
+
+	Type returnValue;
+
+	if(size == 1)
+	{
+		ArrayNode<Type> * toRemove = end;
+		returnValue = removeFromFront();
+		end = nullptr;
+		head = nullptr;
+		delete toRemove;
+	}
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for(int index = 0;index < size - 1; index++)
+		{
+			current = current->getNext();
+		}
+		returnValue = end->getValue();
+		delete end;
+		current = end;
+		current->setNext(nullptr);
+	}
+
+	calculateSize();
+
+	return returnValue;
+}
+
