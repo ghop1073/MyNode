@@ -27,6 +27,23 @@ template<class Type>
 void CTECList<Type>:: addAtIndex(int index, const Type& value)
 {
 
+	assert(index > 0);
+	assert(index < size);
+	assert(size > 0);
+
+	ArrayNode<Type> * previousSpot;
+	ArrayNode<Type>
+	ArrayNode<Type> * nextSpot;
+
+	for(int spot = 0; spot < index + 1; index++)
+	{
+		if(spot == index - 1)
+		{
+
+		}
+	}
+
+
 }
 
 template<class Type>
