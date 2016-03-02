@@ -33,7 +33,7 @@ void CTECList<Type>:: addToEnd(const Type& value)
 }
 
 template<class Type>
-void CTECList<Type>:: addToFront(const type& value)
+void CTECList<Type>:: addToFront(const Type& value)
 {
 
 }

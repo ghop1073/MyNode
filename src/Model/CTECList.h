@@ -12,7 +12,24 @@
 template<class Type>
 class CTECList
 {
+private:
+	int size;
+	ArrayNode<Type> * head;
+	ArrayNode<Type> * end;
 
+public:
+	CTECList();
+	virtual ~CTECList();
+	void addAtIndex(int index, const Type& value);
+	void addToFront(const Type& value);
+	void addToEnd(const Type& value);
+	Type removeFromPosition(int index);
+	Type removeFromFront();
+	Type removeFromBack();
+	Type getEnd();
+	Type getFront();
+	Type getFromIndex(int index);
+	Type set(int index, const Type& value);
 };
 
 #endif /* MODEL_CTECLIST_H_ */
