@@ -23,14 +23,15 @@ public:
 	void addAtIndex(int index, const Type& value);
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
+	void calculateSize();
 	Type removeFromPosition(int index);
 	Type removeFromFront();
 	Type removeFromBack();
+	Type removeFromEnd();
 	Type getEnd();
 	Type getFront();
 	Type getFromIndex(int index);
 	Type set(int index, const Type& value);
-	Type
 };
 
 #endif /* MODEL_CTECLIST_H_ */

@@ -22,11 +22,11 @@ NodeController :: ~NodeController()
 
 void NodeController :: start()
 {
-	arrayTimer.startTime();
+	Timer.startTimer();
 
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
-		notHipsterInts->set(index, (index *23));
+		notHipsterInts->set(index, (index * 7));
 	}
 
 	for(int index = notHipsterInts -> getSize() -  1; index >=0; index --)

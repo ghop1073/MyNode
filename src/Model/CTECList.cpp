@@ -7,6 +7,7 @@
 
 #include "CTECList.h"
 #include <iostream>
+#include <assert.h>
 template <class Type>
 
 CTECList<Type>::CTECList()
@@ -144,3 +145,25 @@ Type CTECList<Type> :: removeFromEnd()
 	return returnValue;
 }
 
+template <class Type>
+void CTECList<Type> :: calculateSize()
+{
+	assert(size >= 0);
+
+	int count = 0;
+	if(head == nullptr)
+	{
+		size = count;
+	}
+	else
+	{
+		count++;
+		ArrayNode<Type> * current = head;
+		while(current->getNext() != nullptr)
+		{
+			count++;
+			current = current->getNext();
+		}
+		size = count;
+	}
+}

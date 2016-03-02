@@ -17,12 +17,12 @@ private:
 public:
 
 	Timer();
-	virtual ~Timer();
 	void startTimer();
+	virtual ~Timer();
 	void stopTimer();
 	void resetTimer();
 	void displayTimerInfo();
-	long getExecutionInMicorseconds();
+	long getExecutionTimeInMicroSec();
 };
 
 

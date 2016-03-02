@@ -6,6 +6,7 @@
  */
 
 #include "Timer.h"
+#include <time.h>
 #include <iostream>
 #include <iomanip> //Makes Output look good
 using namespace std;
@@ -34,6 +35,11 @@ void Timer::stopTimer()
 void Timer::resetTimer()
 {
 	executionTime = 0;
+}
+
+long Timer::getExecutionTimeInMicroSec()
+{
+	  return executionTime;
 }
 
 

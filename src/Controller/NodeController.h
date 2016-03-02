@@ -13,7 +13,10 @@
 #include "../Model/ArrayNode.h"
 #include "../Model/CTECArray.h"
 #include "../Model/CTECArray.cpp"
-
+#include "../Model/Timer.cpp"
+#include "../Model/Timer.h"
+#include "../Model/CTECList.cpp"
+#include "../Model/CTECList.h"
 
 #include <string>
 using namespace std;
