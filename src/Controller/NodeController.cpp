@@ -10,8 +10,7 @@ using namespace std;
 
 NodeController :: NodeController()
 {
-
-notHipsterInts = new CTECArray<int>(5);
+	notHipsterInts = new CTECArray<int>(5);
 }
 
 NodeController :: ~NodeController()
@@ -23,6 +22,8 @@ NodeController :: ~NodeController()
 
 void NodeController :: start()
 {
+	arrayTimer.startTime();
+
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
 		notHipsterInts->set(index, (index *23));
@@ -33,5 +34,7 @@ void NodeController :: start()
 		cout << "the contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
 	}
 
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInfo();
 
 }
