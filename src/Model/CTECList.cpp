@@ -80,7 +80,7 @@ Type CTECList<Type>::removeFromFront()
 }
 
 template<class Type>
-Type CTECList<Type>::removeFromPosition(int index)
+Type CTECList<Type>::removeFromIndex(int index)
 {
 
 	assert(index >= 0);

@@ -5,8 +5,9 @@
  *      Author: nhay7834
  */
 
-#include<iostream>
 #include "ArrayNode.h"
+
+#include<iostream>
 template<class Type>
 ArrayNode<Type>::ArrayNode() : Node<Type>()
 {

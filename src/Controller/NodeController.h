@@ -9,16 +9,17 @@
 #define CONTROLLER_NODECONTROLLER_H_
 #include "../Model/Node.h"
 #include "../Model/Node.cpp"
-#include "../Model/ArrayNode.cpp"
-#include "../Model/ArrayNode.h"
 #include "../Model/CTECArray.h"
 #include "../Model/CTECArray.cpp"
-#include "../Model/Timer.cpp"
+
 #include "../Model/Timer.h"
 #include "../Model/CTECList.cpp"
 #include "../Model/CTECList.h"
 
 #include <string>
+
+#include "../Model/ArrayNode.cpp"
+#include "../Model/ArrayNode.h"
 using namespace std;
 
 class NodeController
@@ -26,6 +27,7 @@ class NodeController
 private:
 
 	CTECArray<int> * notHipsterInts;
+	Timer codeTimer;
 
 public:
 	virtual ~NodeController();

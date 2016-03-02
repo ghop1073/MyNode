@@ -24,9 +24,8 @@ public:
 	void addToFront(const Type& value);
 	void addToEnd(const Type& value);
 	void calculateSize();
-	Type removeFromPosition(int index);
+	Type removeFromIndex(int index);
 	Type removeFromFront();
-	Type removeFromBack();
 	Type removeFromEnd();
 	Type getEnd();
 	Type getFront();

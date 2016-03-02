@@ -4,6 +4,7 @@
  *  Created on: Jan 27, 2016
  *      Author: ghop1073
  */
+
 #include "NodeController.h"
 #include <iostream>
 using namespace std;
@@ -22,7 +23,7 @@ NodeController :: ~NodeController()
 
 void NodeController :: start()
 {
-	Timer.startTimer();
+	codeTimer.startTimer();
 
 	for(int index = 0; index < notHipsterInts->getSize(); index++)
 	{
@@ -34,7 +35,7 @@ void NodeController :: start()
 		cout << "the contents of not hipster ints array node " << index << " are " << notHipsterInts->get(index) << endl;
 	}
 
-	arrayTimer.stopTimer();
-	arrayTimer.displayTimerInfo();
+	codeTimer.stopTimer();
+	codeTimer.displayTimerInfo();
 
 }
