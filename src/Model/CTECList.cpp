@@ -28,21 +28,35 @@ template<class Type>
 void CTECList<Type>:: addAtIndex(int index, const Type& value)
 {
 
+	assert(size > 0);
 	assert(index > 0);
 	assert(index < size);
-	assert(size > 0);
 
-	ArrayNode<Type> * previousSpot;
-	ArrayNode<Type>
+	ArrayNode<Type> * currentSpot = head;
 	ArrayNode<Type> * nextSpot;
+	ArrayNode<Type> * newNext;
+	ArrayNode<Type> * newNode = new ArrayNode<Type>(value);
 
-	for(int spot = 0; spot < index + 1; index++)
-	{
-		if(spot == index - 1)
+		for (int spot = 0; spot < index + 1; index++)
 		{
 
+			if (spot == index - 1)
+			{
+				newNext = newNode;
+				currentSpot->setNext(newNext);
+				newNext->setNext(nextSpot);
+
+			}
+
+			if (spot == index + 1)
+			{
+				nextSpot = currentSpot->getNext();
+			}
+
+			currentSpot = currentSpot->getNext();
 		}
-	}
+
+		calculateSize();
 
 
 }
@@ -51,11 +65,29 @@ template<class Type>
 void CTECList<Type>:: addToEnd(const Type& value)
 {
 
+	assert(size > 0);
+
+		ArrayNode<Type> * newEnd = new ArrayNode<Type>(value);
+		ArrayNode<Type> * currentSpot = end;
+		ArrayNode<Type> * newNext = newEnd;
+
+		currentSpot->setNext(newNext);
+		newNext->setNext(nullptr);
+
+
+		calculateSize();
 }
 
 template<class Type>
 void CTECList<Type>:: addToFront(const Type& value)
 {
+	ArrayNode<Type> * current = head;
+		ArrayNode<Type> * newFirst = new ArrayNode<Type>(value);
+
+		newFirst->setNext(current);
+		head = newFirst;
+
+		calculateSize();
 
 }
 
