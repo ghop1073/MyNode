@@ -28,6 +28,8 @@ private:
 
 	CTECArray<int> * notHipsterInts;
 	Timer codeTimer;
+	void testLists();
+	CTECList<int> * numbers;
 
 public:
 	virtual ~NodeController();
