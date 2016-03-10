@@ -6,7 +6,6 @@
  */
 
 #include "NodeController.h"
-#include "../Tests/ListTester.cpp"
 #include <iostream>
 using namespace std;
 
@@ -39,8 +38,4 @@ void NodeController :: start()
 
 	codeTimer.stopTimer();
 	codeTimer.displayTimerInfo();
-
-	ListTester myListTester;
-	myListTester.allTests();
-
 }

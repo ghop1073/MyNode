@@ -8,7 +8,6 @@
 #ifndef MODEL_TIMER_H_
 #define MODEL_TIMER_H_
 
-#include <timer.cpp>
 #include <time.h>
 
 class Timer

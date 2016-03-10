@@ -6,7 +6,6 @@
  */
 
 #include "Timer.h"
-#include <time.h>
 #include <iostream>
 #include <iomanip> //Makes Output look good
 using namespace std;
