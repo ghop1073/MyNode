@@ -14,6 +14,7 @@ class ArrayNode: public Node<Type>
 {
 private:
 	ArrayNode * next;
+	Type value;
 
 public:
 	ArrayNode();

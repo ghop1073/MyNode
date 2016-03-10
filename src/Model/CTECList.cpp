@@ -187,6 +187,71 @@ Type CTECList<Type> :: removeFromEnd()
 	return returnValue;
 }
 
+template<class Type>
+Type CTECList<Type>::getEnd()
+{
+	return end->getValue();
+
+}
+
+template<class Type>
+Type CTECList<Type>::getFront()
+{
+	return head->getValue();
+}
+
+template<class Type>
+Type CTECList<Type>::set(int pos, const Type& value)
+{
+
+	assert(pos < size && pos >= 0);
+	ArrayNode<Type> * current = head;
+	Type returnValue;
+
+	for (int spot = 0; spot <= pos; spot++)
+	{
+		if (spot != pos)
+		{
+			current = current->getNext();
+		}
+		else
+		{
+			returnValue = current->getValue();
+			current->setValue(value);
+		}
+
+	}
+
+	return returnValue;
+
+}
+
+template<class Type>
+Type CTECList<Type>::getFromIndex(int index)
+{
+	ArrayNode<Type> * current = head;
+	Type valueHolder;
+
+	assert(index >= 0);
+	assert(index < size);
+	assert(this->size > 0);
+
+	for (int spot = 0; spot <= index; spot++)
+	{
+		if (spot != index)
+		{
+			current->getNext();
+		}
+		else
+		{
+			valueHolder = current->getValue();
+		}
+	}
+
+	return valueHolder;
+
+}
+
 template <class Type>
 void CTECList<Type> :: calculateSize()
 {
@@ -209,3 +274,5 @@ void CTECList<Type> :: calculateSize()
 		size = count;
 	}
 }
+
+
